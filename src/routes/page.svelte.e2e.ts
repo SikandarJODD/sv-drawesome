@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 
-test('has expected h1', async ({ page }) => {
+test('shows the drawing surface', async ({ page }) => {
 	await page.goto('/');
-	await expect(page.locator('h1')).toBeVisible();
+	await expect(page).toHaveTitle('Svelte Drawesome');
+	await expect(page.getByRole('application', { name: 'Drawing surface' })).toBeVisible();
 });
