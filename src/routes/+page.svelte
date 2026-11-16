@@ -12,7 +12,14 @@
 
 <main>
 	<div class="canvas">
-		<Draw background="#f7f5f0" placement="bottom" settings="bar" theme="light" draggable gauge />
+		<Draw
+			background="transparent"
+			placement="bottom"
+			settings="bar"
+			theme="light"
+			draggable
+			gauge
+		/>
 	</div>
 </main>
 
@@ -29,6 +36,18 @@
 		height: calc(100svh - clamp(1.5rem, 4vw, 3rem));
 		min-height: 28rem;
 		overflow: hidden;
+		background-color: #f7f5f0;
+		background-image:
+			linear-gradient(to right, rgb(86 103 112 / 8%) 1px, transparent 1px),
+			linear-gradient(to bottom, rgb(86 103 112 / 8%) 1px, transparent 1px),
+			linear-gradient(to right, rgb(86 103 112 / 4%) 1px, transparent 1px),
+			linear-gradient(to bottom, rgb(86 103 112 / 4%) 1px, transparent 1px);
+		background-position: center;
+		background-size:
+			280px 280px,
+			280px 280px,
+			56px 56px,
+			56px 56px;
 		border: 1px solid rgb(35 31 25 / 12%);
 		border-radius: 1rem;
 		box-shadow: 0 16px 40px rgb(35 31 25 / 10%);
