@@ -26,3 +26,4 @@ vite.config.ts.timestamp-*
 test-results
 react-code
 porting-plan.md
+/usage.md
