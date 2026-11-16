@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
-	import { watch } from 'runed';
+	import { watch } from '../internal/watch/watch.svelte';
 	import { portal } from '../actions/portal';
 	import type { Theme } from '../types';
 	import styles from '../styles/tool-menu.module.css';

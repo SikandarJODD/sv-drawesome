@@ -8,7 +8,7 @@
 	import { onMount, tick } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
 	import { SvelteMap } from 'svelte/reactivity';
-	import { watch } from 'runed';
+	import { watch } from '../internal/watch/watch.svelte';
 	import styles from '../styles/morph-bar.module.css';
 
 	type Props = {
