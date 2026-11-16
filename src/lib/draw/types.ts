@@ -27,12 +27,10 @@ export type MotionOptions = {
 	duration?: number;
 };
 
-export type TooltipStyle = Record<string, string | number | null | undefined>;
-
 export type TooltipOptions = {
 	scope?: 'all' | 'tools';
 	delay?: number;
-	style?: TooltipStyle;
+	style?: string;
 };
 
 export type ToolState = {
