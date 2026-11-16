@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { tick, untrack } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
-	import { watch } from 'runed';
+	import { watch } from '../internal/watch/watch.svelte';
 	import { PENS, PEN_BY_ID } from '../engine/pens';
 	import { toPng as serializePng, toSvg as serializeSvg } from '../engine/serialize';
 	import type { Board, PenId, Stroke, ToolId } from '../engine/types';

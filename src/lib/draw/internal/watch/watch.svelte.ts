@@ -1,5 +1,6 @@
 import { untrack } from 'svelte';
-import type { Getter } from '#lib/draw/internal/types/types.ts';
+
+type Getter<T> = () => T;
 
 function runEffect(flush: 'post' | 'pre', effect: () => void | VoidFunction): void {
 	switch (flush) {

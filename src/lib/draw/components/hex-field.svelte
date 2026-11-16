@@ -39,7 +39,7 @@
 </script>
 
 <script lang="ts">
-	import { watch } from 'runed';
+	import { watch } from '../internal/watch/watch.svelte';
 	import styles from '../styles/hex-field.module.css';
 
 	type Props = {

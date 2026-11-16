@@ -1,12 +1,25 @@
-import { describe, expect } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { watch, watchOnce } from './watch.svelte.js';
-import { testWithEffect } from '#lib/draw/internal/test/util.svelte.js';
-import { sleep } from '#lib/draw/internal/utils/sleep.js';
+
+function sleep(ms = 0): Promise<void> {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function testWithEffect(name: string, fn: () => void | Promise<void>): void {
+	test(name, () => {
+		let promise!: void | Promise<void>;
+		const cleanup = $effect.root(() => {
+			promise = fn();
+		});
+
+		return promise instanceof Promise ? promise.finally(cleanup) : cleanup();
+	});
+}
 
 describe('watch', () => {
 	testWithEffect('watchers only track their dependencies', async () => {
 		let count = $state(0);
-		let runs = $state(0);
+		let runs = 0;
 
 		watch(
 			() => count,
