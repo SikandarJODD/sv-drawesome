@@ -69,5 +69,8 @@
 	},
 	"peerDependencies": {
 		"svelte": "^5.0.0"
+	},
+	"dependencies": {
+		"runed": "^0.38.0"
 	}
 }
