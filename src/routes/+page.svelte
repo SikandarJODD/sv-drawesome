@@ -12,7 +12,7 @@
 
 <main>
 	<div class="canvas">
-		<Draw background="#f7f5f0" placement="bottom" settings="tool" theme="light" draggable gauge />
+		<Draw background="#f7f5f0" placement="bottom" settings="bar" theme="light" draggable gauge />
 	</div>
 </main>
 
