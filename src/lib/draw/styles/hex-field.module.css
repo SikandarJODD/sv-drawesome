@@ -1,0 +1,59 @@
+.hex {
+	position: relative;
+	display: inline-flex;
+	height: 28px;
+	align-items: center;
+	gap: 0;
+	padding: 0 9px;
+	border-radius: 8px;
+	background: color-mix(in srgb, var(--sunk) 42%, transparent);
+	color: var(--ink-2);
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: 450;
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+	letter-spacing: 0.01em;
+	transition: background 180ms var(--ease-snappy);
+}
+
+.hex:focus-within {
+	background: color-mix(in srgb, var(--sunk) 70%, transparent);
+}
+
+.hex::after {
+	position: absolute;
+	inset: 0;
+	transform: scale(0.96);
+	border-radius: inherit;
+	box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--accent) 45%, transparent);
+	content: '';
+	opacity: 0;
+	transition:
+		opacity 160ms var(--ease-snappy),
+		transform 220ms var(--ease-snappy);
+	pointer-events: none;
+}
+
+.hex:focus-within::after {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.hex input {
+	width: 6.35ch;
+	min-width: 6.35ch;
+	padding: 0;
+	border: 0;
+	outline: none;
+	background: none;
+	color: color-mix(in srgb, var(--ink-1) 82%, transparent);
+	font: inherit;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: inherit;
+}
+
+.hex input::selection {
+	background: color-mix(in srgb, var(--accent, #4263eb) 28%, transparent);
+}
