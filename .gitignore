@@ -24,3 +24,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 # Playwright
 test-results
+react-code
+porting-plan.md
+/usage.md
+/PUBLISHING.md
