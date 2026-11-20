@@ -87,8 +87,5 @@
 	},
 	"peerDependencies": {
 		"svelte": "^5.0.0"
-	},
-	"dependencies": {
-		"svelte-meta-tags": "^5.0.3"
 	}
 }
